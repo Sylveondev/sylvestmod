@@ -422,6 +422,17 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
+			case 'castle': //Sylvest week
+				var bg:BGSprite = new BGSprite(null, -FlxG.width, -FlxG.height, 0, 0);
+				bg.makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.PINK);
+				
+				add(bg);
+
+				var bg:BGSprite = new BGSprite('sylvest', 0, 0, 0, 0);
+				bg.x -= (bg.width / 4);
+				bg.y -= (bg.height / 4);
+				bg.setGraphicSize(Std.int(bg.width * 0.5));
+				add(bg);
 			case 'stage': //Week 1
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
 				add(bg);
